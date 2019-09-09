@@ -7,7 +7,3 @@ $now = [System.DateTime]::Now
 for ($i = 0; $i -lt 30; $i++) {
     New-Item ("Log_{0}_{1:yyyyMMdd}.txt" -f $applications[$i % 3], $now.AddDays(-$i)) -Force
 }
-
-# > ls | %{ $_.Name -replace '^Log(\w+)\d{12}.txt', '$1' }
-
-ls | %{ rni $_.Name ($_.Name -replace '^Log_(\w+)_(\d+).txt', '$2_$1.log') }
