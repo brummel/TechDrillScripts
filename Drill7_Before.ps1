@@ -1,0 +1,1 @@
+﻿Copy-Item .\Scripts\Instruments.xml .
